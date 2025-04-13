@@ -1,9 +1,11 @@
+
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound';
 import Sitemap from '../components/sitemap/Sitemap';
+import About from '../pages/About'; // Updated to use the new About page
 
 // Service Pages
 import AIIntegration from '../pages/services/AIIntegration';
@@ -14,7 +16,6 @@ import SEOServices from '../pages/services/SEOServices';
 import Analytics from '../pages/services/Analytics';
 
 // Company Pages
-import About from '../pages/company/About';
 import Careers from '../pages/company/Careers';
 import Blog from '../pages/company/Blog';
 import BlogPost from '../pages/company/BlogPost';
@@ -39,6 +40,7 @@ export default function AppRoutes() {
         <Route index element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path="sitemap" element={<Sitemap />} />
+        <Route path="about" element={<About />} />
         
         {/* Service Routes */}
         <Route path="services">
@@ -54,7 +56,6 @@ export default function AppRoutes() {
         </Route>
 
         {/* Company Routes */}
-        <Route path="about" element={<About />} />
         <Route path="careers" element={<Careers />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:slug" element={<BlogPost />} />
